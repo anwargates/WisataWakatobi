@@ -4,43 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register"
-    android:background="@drawable/ic_splash_screen">
+    tools:context=".AddWisata"
+    android:paddingTop="@dimen/status_bar_height">
+
+    <ImageView
+        android:id="@+id/imageUploadPreview"
+        android:layout_width="110dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_globe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Upload Image"
+        android:textColor="@color/primary"
+        android:textFontWeight="500"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageUploadPreview"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="1dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/uploadBtn">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/namaWisataLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxBackgroundColor="@color/white"
-            app:startIconDrawable="@drawable/ic_email"
-            >
+            app:startIconDrawable="@drawable/ic_baseline_title_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/namaWisata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
+                android:hint="Nama Tempat"
+                android:inputType="textNoSuggestions" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -59,41 +85,66 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namaWisataLayout"
-            app:startIconDrawable="@drawable/ic_user">
+            app:startIconDrawable="@drawable/ic_baseline_description_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/deskripsiWisata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Full Name"
-                android:inputType="textPersonName" />
+                android:hint="Deskripsi"
+                android:inputType="textLongMessage" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/lokasiWisataLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopStart="10dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deskripsiWisataLayout"
-            app:passwordToggleEnabled="true"
-            app:boxBackgroundColor="@color/white"
-            app:startIconDrawable="@drawable/ic_lock">
+            app:startIconDrawable="@drawable/ic_baseline_location_on_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lokasiWisata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kata Sandi"
-                android:inputType="textPassword" />
+                android:hint="Lokasi"
+                android:inputType="textNoSuggestions" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/imageInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lokasiWisataLayout"
+            app:startIconDrawable="@drawable/ic_baseline_location_on_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/imageInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lokasi"
+                android:inputType="textNoSuggestions" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -101,50 +152,17 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/button_shape"
-            android:text="DAFTAR"
+            android:text="SUBMIT"
             android:textFontWeight="600"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lokasiWisataLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/imageInputLayout" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Belum punya akun?"
-            android:textColor="@color/grey_secondary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.348"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submitBtn" />
-
-        <TextView
-            android:id="@+id/tvToLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Masuk disini"
-            android:textFontWeight="700"
-            android:textColor="@color/primary"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="321dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wikabgilang" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

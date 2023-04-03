@@ -38,10 +38,10 @@ public class Register extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        fullName = findViewById(R.id.registerName);
-        email = findViewById(R.id.registerEmail);
-        password = findViewById(R.id.registerPassword);
-        registerBtn = findViewById(R.id.registerBtn);
+        fullName = findViewById(R.id.deskripsiWisata);
+        email = findViewById(R.id.namaWisata);
+        password = findViewById(R.id.lokasiWisata);
+        registerBtn = findViewById(R.id.submitBtn);
         goToLogin = findViewById(R.id.tvToLogin);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {

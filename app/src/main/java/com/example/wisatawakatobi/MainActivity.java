@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     Button logoutBtn;
-    MaterialCardView profileCardView;
+    MaterialCardView profileCardView, cardTouristSpot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +20,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         logoutBtn = findViewById(R.id.logoutBtn);
         profileCardView = findViewById(R.id.profileCardView);
+        cardTouristSpot = findViewById(R.id.cardTouristSpot);
 
         profileCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Profile.class));
+            }
+        });
+
+        cardTouristSpot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Search.class));
             }
         });
 

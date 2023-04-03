@@ -1,5 +1,6 @@
 package com.example.wisatawakatobi;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -18,11 +19,13 @@ public class Profile extends AppCompatActivity {
     TextView tvEmail;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+//    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
 
         tvName = findViewById(R.id.tvFullName);
         tvEmail = findViewById(R.id.tvEmail);

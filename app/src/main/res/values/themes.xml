@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="windowActionBar">true</item>
         <item name="android:fontFamily">@font/fonts</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowTranslucentStatus">true</item>

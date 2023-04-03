@@ -52,11 +52,7 @@
                         app:cardCornerRadius="10dp"
                         android:clipToOutline="false"
                         app:cardElevation="3dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.3">
+                        >
 
                         <LinearLayout
                             android:id="@+id/linearLayout3"
@@ -150,6 +146,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardTouristSpot"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
@@ -221,14 +218,15 @@
                     </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:paddingHorizontal="8dp"
                     android:clipToPadding="false"
-                    android:orientation="horizontal">
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp">
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
@@ -245,8 +243,7 @@
                             android:background="@color/white"
                             android:gravity="center"
                             android:orientation="vertical"
-                            android:padding="8dp"
-                            >
+                            android:padding="8dp">
 
 
                             <ImageView
@@ -258,9 +255,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Residence"
-                                android:textFontWeight="600"
                                 android:textAlignment="center"
-                                android:textColor="@color/primary" />
+                                android:textColor="@color/primary"
+                                android:textFontWeight="600" />
                         </LinearLayout>
 
 
@@ -293,15 +290,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Worship"
-                                android:textFontWeight="600"
                                 android:textAlignment="center"
-                                android:textColor="@color/primary" />
+                                android:textColor="@color/primary"
+                                android:textFontWeight="600" />
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
