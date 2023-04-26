@@ -1,13 +1,33 @@
 package com.example.wisatawakatobi.model;
 
-public class Wisata {
-    private String nama, lokasi, deskripsi, rating;
+public class Wisata implements Comparable<Wisata> {
+    private String id, nama, lokasi, deskripsi, jumlah, foto, kategori, harga;
+    private double JWValue;
 
-    public Wisata(String nama, String lokasi, String deskripsi, String rating) {
+    public Wisata(String nama, String lokasi, String deskripsi, String jumlah, String foto, String kategori, String harga) {
         this.nama = nama;
         this.lokasi = lokasi;
         this.deskripsi = deskripsi;
-        this.rating = rating;
+        this.jumlah = jumlah;
+        this.foto = foto;
+        this.kategori = kategori;
+        this.harga = harga;
+    }
+
+    public double getJWValue() {
+        return JWValue;
+    }
+
+    public void setJWValue(double JWValue) {
+        this.JWValue = JWValue;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNama() {
@@ -34,11 +54,40 @@ public class Wisata {
         this.deskripsi = deskripsi;
     }
 
-    public String getRating() {
-        return rating;
+    public String getJumlah() {
+        return jumlah;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setJumlah(String jumlah) {
+        this.jumlah = jumlah;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+
+    @Override
+    public int compareTo(Wisata wisata) {
+        return this.nama.compareTo(wisata.getNama());
     }
 }

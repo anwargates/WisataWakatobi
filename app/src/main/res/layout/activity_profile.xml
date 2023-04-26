@@ -46,6 +46,7 @@
         android:layout_weight="3"
         >
         <LinearLayout
+            android:id="@+id/settingFavOpt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -55,7 +56,7 @@
             >
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="24dp"
                 android:src="@drawable/ic_heart"
                 android:layout_weight="1"
                 />
@@ -87,7 +88,7 @@
             >
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="24dp"
                 android:src="@drawable/ic_gear"
                 android:layout_weight="1"
                 />
@@ -120,7 +121,7 @@
             >
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="24dp"
                 android:src="@drawable/ic_globe"
                 android:layout_weight="1"
                 />
@@ -153,7 +154,7 @@
             >
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="24dp"
                 android:src="@drawable/ic_moon"
                 android:layout_weight="1"
                 />
@@ -162,6 +163,39 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Dark Mode"
+                android:layout_weight="5"
+                android:textColor="@color/primary"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron"
+                android:layout_weight="1"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logoutBtnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="32dp"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_logout"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Logout"
                 android:layout_weight="5"
                 android:textColor="@color/primary"
                 />
