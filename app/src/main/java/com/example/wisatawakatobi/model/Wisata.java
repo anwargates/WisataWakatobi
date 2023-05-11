@@ -90,4 +90,6 @@ public class Wisata implements Comparable<Wisata> {
     public int compareTo(Wisata wisata) {
         return this.nama.compareTo(wisata.getNama());
     }
+
 }
+

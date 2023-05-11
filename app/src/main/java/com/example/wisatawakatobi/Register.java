@@ -40,11 +40,17 @@ public class Register extends AppCompatActivity {
 
     ProgressDialog loadingDialog;
     MaterialAlertDialogBuilder errorDialog;
+    TextView tvVersion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        tvVersion = findViewById(R.id.tvVersionRegister);
+        String version =
+                "Version " + BuildConfig.VERSION_NAME;
+        tvVersion.setText(version);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();

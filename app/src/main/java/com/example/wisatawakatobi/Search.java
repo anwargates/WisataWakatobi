@@ -71,6 +71,7 @@ public class Search extends AppCompatActivity {
         progressDialog.setTitle("Loading");
         progressDialog.setMessage("Mohon Tunggu...");
         progressDialog.show();
+
         wisataAdapter = new WisataAdapter(getApplicationContext(), list, userData);
         wisataAdapter.setDialog(new WisataAdapter.Dialog() {
             @Override
@@ -91,6 +92,7 @@ public class Search extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(wisataAdapter);
+
 
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override

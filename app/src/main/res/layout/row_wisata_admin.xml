@@ -21,7 +21,7 @@
             >
 
             <ImageView
-                android:id="@+id/cardImage"
+                android:id="@+id/rekomenImage"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_globe"
@@ -32,7 +32,7 @@
                 />
 
             <TextView
-                android:id="@+id/cardTitle"
+                android:id="@+id/rekomenTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
                 android:textFontWeight="600"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@+id/editIcon"
-                app:layout_constraintStart_toEndOf="@id/cardImage"
+                app:layout_constraintStart_toEndOf="@id/rekomenImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -59,8 +59,8 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toTopOf="@+id/cardDetails"
                 app:layout_constraintEnd_toEndOf="@+id/deleteIcon"
-                app:layout_constraintStart_toStartOf="@id/cardTitle"
-                app:layout_constraintTop_toBottomOf="@id/cardTitle" />
+                app:layout_constraintStart_toStartOf="@id/rekomenTitle"
+                app:layout_constraintTop_toBottomOf="@id/rekomenTitle" />
 
             <TextView
                 android:id="@+id/cardDetails"

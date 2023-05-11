@@ -5,6 +5,7 @@ import android.inputmethodservice.InputMethodService;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -23,6 +24,7 @@ public class Splash extends AppCompatActivity {
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    TextView tvVersion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,11 @@ public class Splash extends AppCompatActivity {
 //        decorView.setSystemUiVisibility(uiOptions);
 
         setContentView(R.layout.activity_splash);
+
+        tvVersion = findViewById(R.id.tvVersionSplash);
+        String version =
+                "Version " + BuildConfig.VERSION_NAME;
+        tvVersion.setText(version);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();

@@ -149,7 +149,7 @@
         app:srcCompat="@drawable/wikabgilang" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvVersionRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"

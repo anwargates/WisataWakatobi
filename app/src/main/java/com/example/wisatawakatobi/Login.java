@@ -21,6 +21,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.w3c.dom.Text;
+
 import java.util.Objects;
 
 public class Login extends AppCompatActivity {
@@ -34,12 +36,18 @@ public class Login extends AppCompatActivity {
 
     ProgressDialog loadingDialog;
     MaterialAlertDialogBuilder errorDialog;
+    TextView tvVersion;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        tvVersion = findViewById(R.id.tvVersionLogin);
+        String version =
+                "Version " + BuildConfig.VERSION_NAME;
+        tvVersion.setText(version);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();

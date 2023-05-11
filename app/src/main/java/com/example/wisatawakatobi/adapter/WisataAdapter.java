@@ -8,27 +8,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.wisatawakatobi.R;
-import com.example.wisatawakatobi.Search;
 import com.example.wisatawakatobi.model.User;
 import com.example.wisatawakatobi.model.Wisata;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.varunest.sparkbutton.SparkButton;
 import com.varunest.sparkbutton.SparkEventListener;
 
@@ -104,8 +98,8 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.WisataView
 
         public WisataViewHolder(@NonNull View itemView) {
             super(itemView);
-            cardImage = itemView.findViewById(R.id.cardImage);
-            cardTitle = itemView.findViewById(R.id.cardTitle);
+            cardImage = itemView.findViewById(R.id.rekomenImage);
+            cardTitle = itemView.findViewById(R.id.rekomenTitle);
             cardDescription = itemView.findViewById(R.id.cardDescription);
             cardDetails = itemView.findViewById(R.id.cardDetails);
             favBtn = itemView.findViewById(R.id.favBtn);
